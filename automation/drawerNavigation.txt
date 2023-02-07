@@ -1,0 +1,4 @@
+ 1. COPIAR en App.tsx después de la instalación
+******************************************************
+import 'react-native-gesture-handler';
+******************************************************

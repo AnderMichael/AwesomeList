@@ -1,0 +1,64 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "type": "npm",
+        "script": "android",
+        "problemMatcher": [],
+        "label": "RUN APP ANDROID - React Native",
+        "detail": "react-native run-android"
+    },
+    {
+        "label": "Navigation Basics --- First step navigation",
+        "type": "shell",
+        "command": "./automation/navigationBasics.sh",
+        "windows": {
+            "command": ".\\automation\\navigationBasics.cmd"
+        }
+    },
+    {
+        "label": "bottomTabNavigation - after navigationBasics",
+        "type": "npm",
+        "script": "install",
+        "problemMatcher": [],
+        "detail": "@react-navigation/bottom-tabs"
+    },
+    {
+        "type": "shell",
+        "command": "automation/drawerNavigation.sh",
+        "label": "drawerNavigation - after navigationBasics",
+        "windows": {
+            "command": ".\\automation\\drawerNavigation.cmd"
+        },
+        "problemMatcher": [
+            "$gcc"
+        ]
+    },
+    {
+        "type": "npm",
+        "script": "install",
+        "problemMatcher": [],
+        "label": "stackNavigation --- after navigationBasics",
+        "detail": "@react-navigation/native-stack"
+    },
+    {
+        "type": "typescript",
+        "tsconfig": "tsconfig.json",
+        "problemMatcher": [
+            "$tsc"
+        ],
+        "group": "build",
+        "label": "tsc: build - tsconfig.json"
+    },
+    {
+        "type": "typescript",
+        "tsconfig": "tsconfig.json",
+        "option": "watch",
+        "problemMatcher": [
+            "$tsc-watch"
+        ],
+        "group": "build",
+        "label": "tsc: watch - tsconfig.json"
+    }
+]
+}

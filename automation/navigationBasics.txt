@@ -1,0 +1,18 @@
+ 1. COPIAR en MainActivity.java después de la instalación
+******************************************************
+ import android.os.Bundle;
+ @Override
+ protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
+ }
+******************************************************
+2. En App.tsx
+******************************************************
+import { NavigationContainer } from '@react-navigation/native';
+
+export const App = () => {
+  return (
+    <NavigationContainer>{/* Rest of your app code */}</NavigationContainer>
+  );
+}
+******************************************************
