@@ -5,7 +5,7 @@ import {colorsApp} from '../constants/colorsApp';
 export const globalStyles = StyleSheet.create({
   backgroundApp: {
     flex: 1,
-    backgroundColor: colorsApp.YELLOW_COLOR,
+    backgroundColor: colorsApp.GRAY_COLOR,
     padding: 20,
     alignItems: 'stretch',
     justifyContent: 'space-evenly',

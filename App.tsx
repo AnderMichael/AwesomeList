@@ -12,11 +12,12 @@
 
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {StackNavigator} from './src/navigator/StackNavigator';
+import { Home } from './src/components/Home';
+import {StackNavigatorMyCourses} from './src/navigator/StackNavigatorMyCourses';
 const App = () => {
   return (
     <NavigationContainer>
-      <StackNavigator />
+      <Home />
     </NavigationContainer>
   );
 };

@@ -38,7 +38,7 @@ export const ButtonDirection = ({
       }}
       containerStyle={{
         flex: 1,
-        alignItems: left ? 'flex-start' : 'flex-end',
+        alignItems: 'stretch',
       }}
       onPress={action}
     />

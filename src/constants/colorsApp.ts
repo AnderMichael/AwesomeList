@@ -1,13 +1,13 @@
-const GRAY_COLOR = '#DBDAD7';
-const MUSTARD_COLOR = '#D1B64C';
-const YELLOW_COLOR = '#FEDA2F';
-const BROWN_COLOR = '#645546';
-const RED_COLOR = '#A62C2A';
+const GRAY_COLOR = '#AEBDDC';
+const VIOLET_COLOR = '#6D779D';
+const BLUE_COLOR = '#FEDA2F';
+const BROWN_COLOR = '#2D69F8';
+const RED_COLOR = '#BC3F33';
 
 export const colorsApp = {
   GRAY_COLOR,
-  MUSTARD_COLOR,
-  YELLOW_COLOR,
+  VIOLET_COLOR,
+  BLUE_COLOR,
   BROWN_COLOR,
   RED_COLOR,
 };
