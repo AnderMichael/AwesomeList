@@ -56,6 +56,7 @@ export const ScreenStudent = ({route}:any) => {
           nextStudent={nextStudent}
           previousStudent={previousStudent}
           studentsNumber={studentsListLength}
+          list={attendanceList}
         />
       )}
     </>
