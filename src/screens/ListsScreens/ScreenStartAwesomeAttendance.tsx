@@ -34,7 +34,7 @@ export const ScreenStartAwesomeAttendance = ({route}: any) => {
             containerStyle={{marginVertical: 10}}
             titleStyle={styles.titleButton}
             onPress={() =>
-              navigation.navigate(constantsStackLists.students.screen)
+              navigation.navigate(constantsStackLists.students.screen,{name})
             }>
             <Icon name="play-arrow" color="white" size={30} /> Start Attendance
           </Button>
