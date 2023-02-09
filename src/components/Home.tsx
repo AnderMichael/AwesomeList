@@ -1,6 +1,5 @@
-import {StackNavigatorMyCourses} from '../navigator/StackNavigatorMyCourses';
-import {TabNavigator} from '../navigator/TabNavigator';
+import { StackNavigatorLogin } from '../navigator/StackNavigatorLogin';
 
 export const Home = () => {
-  return <TabNavigator />;
+  return <StackNavigatorLogin />;
 };

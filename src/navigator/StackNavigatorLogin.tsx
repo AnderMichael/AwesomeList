@@ -1,8 +1,8 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {HomeBulbSubjects} from '../components/HomeBulbSubjects';
 import {constantsStackLogin} from '../constants/constantsStackLogin';
 import {ScreenLogin} from '../screens/LoginScreens/ScreenLogin';
 import {useSelector} from 'react-redux';
+import { TabNavigator } from './TabNavigator';
 
 export const StackNavigatorLogin = () => {
   const Stack = createNativeStackNavigator();
@@ -15,7 +15,7 @@ export const StackNavigatorLogin = () => {
       {login ? (
         <Stack.Screen
           name={constantsStackLogin.main.title}
-          component={HomeBulbSubjects}
+          component={TabNavigator}
         />
       ) : (
         <Stack.Screen

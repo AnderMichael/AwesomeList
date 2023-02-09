@@ -12,13 +12,17 @@
 
 import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import { Home } from './src/components/Home';
+import {Provider} from 'react-redux';
+import {Home} from './src/components/Home';
 import {StackNavigatorMyCourses} from './src/navigator/StackNavigatorMyCourses';
+import {configureStore} from './src/store/configureStore';
 const App = () => {
   return (
-    <NavigationContainer>
-      <Home />
-    </NavigationContainer>
+    <Provider store={configureStore}>
+      <NavigationContainer>
+        <Home />
+      </NavigationContainer>
+    </Provider>
   );
 };
 

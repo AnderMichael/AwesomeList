@@ -78,7 +78,7 @@ export const DirectionButtons = ({
             borderRadius: 30,
             marginHorizontal: 4,
           }}
-          onPress={navigation.goBack}
+          onPress={navigation.goBack} // !!!!!!!!!!!!!!!!!!!!!!!!!!!
         />
       ) : (
         <></>

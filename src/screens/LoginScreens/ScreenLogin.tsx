@@ -2,7 +2,7 @@ import {Input} from '@rneui/base';
 import {useFormik} from 'formik';
 import React from 'react';
 import {StyleSheet, Text, Image, View, TouchableOpacity} from 'react-native';
-import {ButtonApp} from '../../components/LoginComponents/ButtonLogin';
+import {ButtonApp} from '../../components/ButtonApp';
 import {colorsApp} from '../../constants/colorsApp';
 import {globalStyles} from '../../themes/global';
 import * as yup from 'yup';
@@ -53,17 +53,22 @@ export const ScreenLogin = () => {
   return (
     <>
       <View style={globalStyles.backgroundApp}>
-        <Text style={globalStyles.title}>
-          Welcome to Bulb Subjects! {'\n'}
+        <Text
+          style={{
+            ...globalStyles.title,
+            color: colorsApp.RED_COLOR,
+          }}>
+          Welcome to AwesomeList! {'\n'}
           <Text
-            style={{...globalStyles.title, fontFamily: 'JosefinSans-Light'}}>
-            The best way to visualize your subjects
+            style={{
+              ...globalStyles.title,
+              fontFamily: 'JosefinSans-Light',
+              color: colorsApp.RED_COLOR,
+            }}>
+            The best way to visualize your attendance
           </Text>
         </Text>
-        <Image
-          source={require('../../assets/BulbMenu.png')}
-          style={{height: 220, width: 150, alignSelf: 'center'}}
-        />
+
         <Input
           placeholder={'Email'}
           onChangeText={text => formik.setFieldValue('email', text)}
@@ -71,7 +76,7 @@ export const ScreenLogin = () => {
           style={{
             fontSize: 20,
             fontFamily: 'JosefinSans-Light',
-            color: colorsApp.BROWN_COLOR,
+            color: colorsApp.RED_COLOR,
           }}
           inputContainerStyle={{borderBottomWidth: 0}}
           underlineColorAndroid={colorsApp.RED_COLOR}
@@ -90,7 +95,7 @@ export const ScreenLogin = () => {
           style={{
             fontSize: 20,
             fontFamily: 'JosefinSans-Light',
-            color: colorsApp.BROWN_COLOR,
+            color: colorsApp.RED_COLOR,
           }}
           inputContainerStyle={{borderBottomWidth: 0}}
           underlineColorAndroid={colorsApp.RED_COLOR}
