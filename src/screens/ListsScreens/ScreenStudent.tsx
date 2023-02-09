@@ -6,7 +6,7 @@ import {StudentsInformation} from '../../components/StudentsInformation';
 import {RowButtonsAttendance} from '../../components/RowButtonsAttendance';
 import {DirectionButtons} from '../../components/DirectionButtons';
 
-export const ScreenStudent = () => {
+export const ScreenStudent = ({route}:any) => {
   const navigation = useNavigation();
 
   const {
@@ -17,7 +17,7 @@ export const ScreenStudent = () => {
     indexStudent,
     currentStudent,
     attendanceRow,
-  } = useStudents();
+  } = useStudents(route.params.name);
 
   const changeAttend = (attend: string) => {
     attendanceList[indexStudent].calification = attend;
@@ -56,6 +56,7 @@ export const ScreenStudent = () => {
           nextStudent={nextStudent}
           previousStudent={previousStudent}
           studentsNumber={studentsListLength}
+          list={attendanceList}
         />
       )}
     </>

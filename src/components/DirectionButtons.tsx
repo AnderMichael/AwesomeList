@@ -8,6 +8,7 @@ interface DirectionButtonsProps {
   nextStudent: () => void;
   studentsNumber: number;
   navigation: any;
+  list: any;
 }
 export const DirectionButtons = ({
   indexStudent,
@@ -15,7 +16,12 @@ export const DirectionButtons = ({
   nextStudent,
   studentsNumber,
   navigation,
+  list,
 }: DirectionButtonsProps) => {
+  const showList = () => {
+    console.log(list);
+    navigation.goBack();
+  };
   return (
     <>
       <View
@@ -78,7 +84,7 @@ export const DirectionButtons = ({
             borderRadius: 30,
             marginHorizontal: 4,
           }}
-          onPress={navigation.goBack} // !!!!!!!!!!!!!!!!!!!!!!!!!!!
+          onPress={showList} // !!!!!!!!!!!!!!!!!!!!!!!!!!!
         />
       ) : (
         <></>
