@@ -31,7 +31,7 @@ export const StudentsInformation = ({
         size={180}
         rounded
         source={{
-          uri: `https://randomuser.me/api/portraits/men/1${indexStudent}.jpg`,
+          uri: `https://randomuser.me/api/portraits/men/${currentStudent.id}.jpg`,
         }}
         containerStyle={{
           alignSelf: 'center',
