@@ -36,6 +36,20 @@ El problema presentado anteriormente es muy grande y probablemente lleve tiempo 
   
   `npx react-native run-android`
 
+### Para iniciar sesión en la App
+
+Email: teacher1@school.com
+
+Password: teacher1
+
+Email: teacher2@school.com
+
+Password: teacher2
+
+Email: teacher3@school.com
+
+Password: teacher3
+
 ## Dificultades
 La aplicación debía contar con un servicio web de base de datos denominado Cloud Firestore tanto para la autenticación como para el almacenamiento de los nuevos datos, sin embargo, la base de datos de Firestore es NoSQL y se requería una base de tipo SQL preferiblemente, por lo que para el entregable se hizo un artificio en el código para simular la tabla principal de una base de datos SQL.
 ## Conclusiones
