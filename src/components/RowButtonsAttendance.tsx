@@ -1,13 +1,22 @@
 import {View} from 'react-native';
 import {ButtonAttendance} from './ButtonAttendance';
 
-interface RowButtonsAttendance {
-    previousStudent: () =>void,
-    nextStudent: () =>void
+interface RowButtonsAttendanceProps {
+  changeAttend: (attend: string) => void;
+  state: string;
 }
 
+export const RowButtonsAttendance = ({
+  changeAttend,
+  state,
+}: RowButtonsAttendanceProps) => {
+  const present = () => {
+    changeAttend('Present');
+  };
 
-export const RowButtonsAttendance = ({previousStudent,nextStudent}:RowButtonsAttendance) => {
+  const fault = () => {
+    changeAttend('Fault');
+  };
   return (
     <>
       <View style={{flexDirection: 'row', alignItems: 'stretch'}}>
@@ -15,13 +24,15 @@ export const RowButtonsAttendance = ({previousStudent,nextStudent}:RowButtonsAtt
           title="FAULT"
           color="red"
           icon="exclamation-triangle"
-          action={previousStudent}
+          action={fault}
+          type={state == 'NA'? 'solid': state == 'Present'? 'clear' : 'solid'}
         />
         <ButtonAttendance
           title="PRESENT"
           color="green"
           icon="check-circle"
-          action={nextStudent}
+          action={present}
+          type={state == 'NA'? 'solid': state == 'Fault'? 'clear' : 'solid'}
         />
       </View>
     </>

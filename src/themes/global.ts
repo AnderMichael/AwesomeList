@@ -6,7 +6,9 @@ export const globalStyles = StyleSheet.create({
   backgroundApp: {
     flex: 1,
     backgroundColor: colorsApp.GRAY_COLOR,
-    padding: 20,
+    paddingHorizontal: 20,
+    paddingBottom: 50,
+    paddingTop: 10,
     alignItems: 'stretch',
     justifyContent: 'space-evenly',
   },
@@ -14,6 +16,6 @@ export const globalStyles = StyleSheet.create({
     fontFamily: 'JosefinSans-SemiBold',
     textAlign: 'center',
     fontSize: 25,
-    color: colorsApp.RED_COLOR,
+    color: colorsApp.BROWN_COLOR,
   },
 });

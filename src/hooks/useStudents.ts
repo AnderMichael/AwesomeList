@@ -1,6 +1,10 @@
 import {Student} from '../interfaces/Student';
 import {useEffect, useState} from 'react';
 
+export interface attend {
+  calification: string;
+}
+
 export const useStudents = () => {
   const studentsList: Student[] = [
     {
@@ -47,6 +51,11 @@ export const useStudents = () => {
 
   const studentsListLength = studentsList.length;
 
+  const attendanceRow:attend[]=[];
+
+  for (let i = 0; i < studentsListLength; i++) {
+    attendanceRow.push({calification: 'NA'});
+  }
   const [currentStudent, setCurrentStudent] = useState<Student>({
     id: 0,
     first_name: '',
@@ -86,5 +95,6 @@ export const useStudents = () => {
     attendance,
     indexStudent,
     currentStudent,
+    attendanceRow,
   };
 };

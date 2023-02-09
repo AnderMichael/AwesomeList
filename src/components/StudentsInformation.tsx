@@ -1,11 +1,13 @@
 import {StyleSheet, Text, View} from 'react-native';
 import {Avatar} from '@rneui/themed';
 import {Student} from '../interfaces/Student';
+import { colorsApp } from '../constants/colorsApp';
 
 interface StudentsInformationProps {
   indexStudent: number;
   currentStudent: Student;
 }
+
 export const StudentsInformation = ({
   indexStudent,
   currentStudent,
@@ -44,6 +46,6 @@ const styles = StyleSheet.create({
   listNumber: {
     fontFamily: 'JosefinSans-Bold',
     fontSize: 50,
-    color: 'lightpink',
+    color: colorsApp.VIOLET_COLOR,
   },
 });

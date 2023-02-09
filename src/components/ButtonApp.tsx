@@ -1,6 +1,6 @@
 import {Button} from '@rneui/base';
-import {colorsApp} from '../../constants/colorsApp';
-import {globalStyles} from '../../themes/global';
+import {colorsApp} from '../constants/colorsApp';
+import {globalStyles} from '../themes/global';
 
 interface ButtonAppProps {
   title: string;
@@ -18,7 +18,7 @@ export const ButtonApp = ({title, action}: ButtonAppProps) => {
       titleStyle={{
         ...globalStyles.title,
         fontFamily: 'JosefinSans-Bold',
-        color: colorsApp.YELLOW_COLOR,
+        color: colorsApp.BROWN_COLOR,
       }}
       onPress={action}
     />

@@ -5,6 +5,7 @@ interface iButtonAttendace {
   color: string;
   icon: string;
   action: () => void;
+  type: any;
 }
 
 export const ButtonAttendance = ({
@@ -12,6 +13,7 @@ export const ButtonAttendance = ({
   color,
   icon,
   action,
+  type
 }: iButtonAttendace) => {
   return (
     <Button
@@ -36,6 +38,7 @@ export const ButtonAttendance = ({
         marginHorizontal: 4,
       }}
       onPress={action}
+      type={type}
     />
   );
 };
